@@ -98,6 +98,7 @@ if __name__ == '__main__':
             break
         else:
             try:
+                #api_key for wolframalpha
                 client = wolframalpha.Client('api_key')
                 res = client.query(user_input)
                 answer = next(res.results).text
