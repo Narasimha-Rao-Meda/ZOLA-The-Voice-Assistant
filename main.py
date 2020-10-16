@@ -125,8 +125,11 @@ if __name__ == '__main__':
                 client = wolframalpha.Client('KLGYQH-QYT7LUTLHY')
                 res = client.query(user_input)
                 answer = next(res.results).text
-                speak(answer)
-                print(answer)
+                if answer in ['(no data available)']:
+                    webbrowser.open_new_tab('https:\\google.com\search?q={}'.format(user_input))
+                else:
+                    speak(answer)
+                    print(answer)
             except:
                 try:
                     data = wikipedia.page(user_input)
