@@ -9,6 +9,7 @@ engine.setProperty('voice', voices[1].id)
 
 def speak(audio):
     engine.say(audio)
+    print(audio)
     engine.runAndWait()
 
 def wait(x):
