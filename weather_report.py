@@ -5,7 +5,7 @@ from user_command import command
 def weather():
     speak("What is the city name?")
     city = command()
-    api_key = '4ea2093c39580db034917e4a96491671'
+    api_key = 'your api_key'
     url = 'https://api.openweathermap.org/data/2.5/weather?q='+city+'&appid='+api_key
     response = requests.get(url)
     if response.status_code == 200:

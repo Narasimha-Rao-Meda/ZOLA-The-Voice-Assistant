@@ -94,11 +94,11 @@ if __name__ == '__main__':
             weather()
             wait(2)
         elif user_input in ['stop','close','bye','nothing','seeyou','abort','terminate']:
-            speak('Your Voice assistant is closing')
+            speak('Your Voice assistant is closing now')
             break
         else:
             try:
-                client = wolframalpha.Client('KLGYQH-QYT7LUTLHY')
+                client = wolframalpha.Client('api_key')
                 res = client.query(user_input)
                 answer = next(res.results).text
                 if answer in ['(no data available)']:
