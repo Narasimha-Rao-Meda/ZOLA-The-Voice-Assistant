@@ -106,7 +106,6 @@ if __name__ == '__main__':
                     webbrowser.open_new_tab('https:\\google.com\search?q={}'.format(user_input))
                 else:
                     speak(answer)
-                    print(answer)
             except:
                 try:
                     data = wikipedia.page(user_input)

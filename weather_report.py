@@ -19,14 +19,9 @@ def weather():
         wind_speed = data['wind']['speed']
         report = data['weather']
         speak("Temperature is {:.2f} degree Celsius".format(temperature))
-        print("Temperature is {:.2f} degree Celsius".format(temperature))
         speak("Humidity is {} percent".format(humidity))
-        print("Humidity is {} percent".format(humidity))
         speak("Wind Speed is {} miles per second".format(wind_speed))
-        print("Wind Speed is {} miles per second".format(wind_speed))
         speak("Report is {} ".format(report[0]['description']))
-        print("Report is {} ".format(report[0]['description']))
     else:
         speak("City not found")
-        print("City not found")
     
