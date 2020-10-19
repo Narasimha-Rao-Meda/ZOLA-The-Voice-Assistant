@@ -13,7 +13,6 @@ def command():
         user_input = r.recognize_google(audio,language='en')
     except:
         speak("Pardon me, can you say that again")
-        print("Pardon me, can you say that again")
         user_input = command()
     return user_input
 
